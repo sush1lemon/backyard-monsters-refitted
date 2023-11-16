@@ -17,7 +17,5 @@ const toLog = pino.transport({
 const pretty = require("pino-pretty");
 const logger = pino({}, toLog);
 
-const fs = require("fs/promises");
-
 export const logging = (message: string, vars: unknown = "") => logger.info(`${message} ${vars}`);
 export const errorLog = (message: string, vars: unknown = "") => logger.error(`${message} ${vars}`);
