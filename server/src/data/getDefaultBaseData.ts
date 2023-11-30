@@ -46,6 +46,10 @@ export const getDefaultBaseData = (user?: User) => {
     homebaseid: 0, // Generate
     credits: 8000,
     champion: "null",
+    // Should probably be 0 or unset
+    // Client default is 0 and seems to be (practically) a boolean
+    // so empire should probably not be destroyed on new base
+    // (unless it starts out destroyed for tutorial which is possible)
     empiredestroyed: 1,
     worldid: "0", // Generate
     event_score: 0,
@@ -145,6 +149,9 @@ export const getDefaultBaseData = (user?: User) => {
     storedata: {},
     coords: {},
     quests: {},
+    // This seems to be modeling `iresources` not `resources`
+    // `resources` expects r{1-4} and r{1-4}bonus
+    // while `iresources` expects the below format
     resources: {
       r1: 1600,
       r2: 1600,
@@ -189,6 +196,10 @@ export const getDefaultBaseData = (user?: User) => {
 
     // Arrays
     updates: [], // Important: is this [] or "[]"
+                 // For the above ^
+                 // Client calls `updates.length` directly so it is likely []
+                 // or the JSON parser just doesn't care and unwraps "[]"
+                 //  into an array either way
     effects: [],
     homebase: [],
     outposts: [],
