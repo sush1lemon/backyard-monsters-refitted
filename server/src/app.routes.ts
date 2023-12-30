@@ -5,10 +5,7 @@ import { login } from "./controllers/auth/login";
 import { register } from "./controllers/auth/register";
 import { baseLoad } from "./controllers/baseLoad";
 import { updateSaved } from "./controllers/updateSaved";
-import {
-  initMapRoom,
-  mapRoomVersion,
-} from "./controllers/maproom/initMapAndVersion";
+import { initialPlayerCellData } from "./controllers/maproom/initialPlayerCellData";
 import { getMapRoomCells } from "./controllers/maproom/getCells";
 import { getNewMap } from "./controllers/maproom/getNewMap";
 import { auth } from "./middleware/auth";
@@ -17,11 +14,12 @@ import { infernoMonsters } from "./controllers/inferno/infernoMonsters";
 import { recordDebugData } from "./controllers/debug/recordDebugData";
 import { getTemplates } from "./controllers/yardplanner/getTemplates";
 import { saveTemplate } from "./controllers/yardplanner/saveTemplate";
+import { Context } from "koa";
 
 const router = new Router();
 
 // Init route
-router.get("/api/bm/getnewmap", debugDataLog("Posting to new maproom"), getNewMap);
+router.get("/api/bm/getnewmap", debugDataLog("Getting new maproom"), getNewMap);
 router.post("/api/bm/getnewmap", debugDataLog("Posting to new maproom"), getNewMap);
 
 // Auth
@@ -45,10 +43,15 @@ router.post("/api/bm/base/infernomonsters", auth, debugDataLog("Load inferno mon
 router.post("/api/bm/base/save", auth, debugDataLog("Inferno save data"), baseSave);
 
 // Worldmap
-router.post("/worldmapv3/setmapversion", auth, debugDataLog("Set maproom version"), mapRoomVersion);
-router.post("/worldmapv3/initworldmap", auth, debugDataLog("Init maproom data"), initMapRoom);
+router.post("/worldmapv3/initworldmap", auth, debugDataLog("Posting maproom init data"), initialPlayerCellData);
+router.get("/worldmapv3/initworldmap", auth, debugDataLog("Getting maproom init data"), initialPlayerCellData);
 router.post("/worldmapv3/getcells", auth, debugDataLog("Get maproom cells"), getMapRoomCells);
 router.post("/worldmapv3/relocate", auth, debugDataLog("Relocating base"), relocate);
+
+router.post("/worldmapv3/setmapversion", auth, debugDataLog("Set maproom version"), async (ctx: Context) => { 
+  ctx.status = 200,
+  ctx.body = { version: 3 }
+});
 
 // Logging routes
 router.post("/api/player/recorddebugdata", recordDebugData);
