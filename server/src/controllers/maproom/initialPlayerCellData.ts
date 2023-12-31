@@ -1,6 +1,6 @@
 import { KoaController } from "../../utils/KoaController";
 
-export const getMapRoomCells: KoaController = async (ctx) => {
+export const initialPlayerCellData: KoaController = async (ctx) => {
   const uid = ctx.session.userid || 0;
 
   ctx.status = 200;
@@ -30,6 +30,6 @@ export const getMapRoomCells: KoaController = async (ctx) => {
         b: 50,
         i: 50,
       },
-    ]
+    ],
   };
 };
