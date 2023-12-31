@@ -189,8 +189,12 @@ export const getDefaultBaseData = (user?: User) => {
     savetemplate: [],
     updates: [],
     effects: [],
-    homebase: ["0", "0"], // MapRoom2 co-ordinates, configure dynamically.
-    outposts: [],
+    homebase: ["0", "0"],
+    outposts: [ // Dummy outposts
+      [10, 20, 600024],
+      [15, 25, 600025],
+      [30, 40, 600026],
+    ],
     worldsize: [500, 500],
     wmstatus: [],
     chatservers: ["bym-chat.kixeye.com"],

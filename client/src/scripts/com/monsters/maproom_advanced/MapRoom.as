@@ -710,12 +710,13 @@ package com.monsters.maproom_advanced
       
       internal static function GetCell(param1:int, param2:int, param3:Boolean = false) : Object
       {
-         var _loc4_:Point;
-         var _loc5_:int = (_loc4_ = new Point(int(param1 / _zoneWidth) * _zoneWidth,int(param2 / _zoneHeight) * _zoneHeight)).x * 10000 + _loc4_.y;
-         RequestData(_loc4_,param3);
-         if(_zones && _zones[_loc5_] && Boolean(_zones[_loc5_].data) && Boolean(_zones[_loc5_].data[param1]))
+         var point:Point;
+         var zoneId:int = (point = new Point(int(param1 / _zoneWidth) * _zoneWidth,int(param2 / _zoneHeight) * _zoneHeight)).x * 10000 + point.y;
+         RequestData(point,param3);
+         // GLOBAL.Message("zoneId is: " + zoneId + " has data: " + Boolean(_zones[zoneId].data));
+         if(_zones && _zones[zoneId] && Boolean(_zones[zoneId].data) && Boolean(_zones[zoneId].data[param1]))
          {
-            return _zones[_loc5_].data[param1][param2];
+            return _zones[zoneId].data[param1][param2];
          }
          return null;
       }

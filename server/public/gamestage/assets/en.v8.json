@@ -8,6 +8,9 @@
         "daveclub": "Dave Club is currently disabled on Backyard Monster Refitted.",
         "addshiny": "Sorry... you cannot add Shiny on Backyard Monsters Refitted. To find out more please visit our <b>Discord.</b>"
     },
+    "process": {
+        "outpost": "Processing next Outpost..."
+    },
     "requirements": {
         "notmet": "Requirements not met."
     },
