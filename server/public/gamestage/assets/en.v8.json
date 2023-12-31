@@ -75,6 +75,7 @@
         "opening": "Opening Map..."
     },
     "map": {
+        "coordinateoffmap": "The coordinates specified are off the map grid.",
         "msg": {
             "disabled": "The Map Room is currently <b>disabled</b> in Backyard Monsters Refitted.<br><br>We are aiming to get this working for our <b>beta</b> release.<br><br>For more information join our discord."
         },
@@ -114,6 +115,7 @@
         }
     },
     "pop": {
+        "outposts": "Outposts",
         "rupgraded": {
             "title": "{v1} Level {v2}",
             "body": "Congratulations, you've finished upgrading your {v1}. It will produce {v2} at a faster rate and increase capacity."
@@ -263,6 +265,9 @@
             "reward": "Reward:"
         }
     },
+    "label": {
+        "jumptolocation": "Jump to location:"
+    },
     "ui": {
         "topbuildings": "Buildings",
         "topquests": "Quests",
@@ -334,6 +339,7 @@
         "brag": "Brag to your friends",
         "pick": "Pick",
         "yes": "Yes",
+        "continue": "Continue",
         "nothanks": "No Thanks",
         "fullscreen": "Full Screen",
         "relocateYard": "Relocate Yard",
@@ -343,6 +349,9 @@
         "move": "Move",
         "more": "More...",
         "random": "Random",
+        "home": "Home",
+        "jump": "Jump",
+        "bookmarks": "Bookmarks",
         "openstore": "Open Store",
         "openbunker": "Open Bunker",
         "openbaiter": "Open Baiter",
