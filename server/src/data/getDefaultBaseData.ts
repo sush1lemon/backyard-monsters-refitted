@@ -141,7 +141,7 @@ export const getDefaultBaseData = (user?: User) => {
     monsterbaiter: {},
     loot: {},
     storedata: {},
-    coords: {},
+    coords: { x: 0, y: 0 }, // Check this
     quests: {},
     resources: {
       r1: 0,

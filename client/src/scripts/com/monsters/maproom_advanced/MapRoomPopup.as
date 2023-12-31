@@ -17,7 +17,7 @@ package com.monsters.maproom_advanced
    import flash.net.URLRequest;
    import flash.utils.getTimer;
    
-   internal class MapRoomPopup extends MapRoomPopup_CLIP
+   class MapRoomPopup extends MapRoomPopup_CLIP
    {
        
       

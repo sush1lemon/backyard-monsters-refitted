@@ -77,6 +77,7 @@
     "map": {
         "coordinateoffmap": "The coordinates specified are off the map grid.",
         "msg": {
+            "notbuilt": "You have not built the Map Room. Please check the Buildings menu.",
             "disabled": "The Map Room is currently <b>disabled</b> in Backyard Monsters Refitted.<br><br>We are aiming to get this working for our <b>beta</b> release.<br><br>For more information join our discord."
         },
         "norecycle": "You cannot recycle your Map Room in the New World Map. If you want to relocate your yard, click on your Town Hall and choose Relocate."

@@ -579,15 +579,15 @@ package com.monsters.maproom_advanced
          };
       }
       
-      private static function RequestData(param1:Point, param2:Boolean = false) : void
+      private static function RequestData(point:Point, hasForce:Boolean = false) : void
       {
          var z:objZone = null;
          var loadvars:Array = null;
          var dataRequest:Object = null;
          var handleLoadSuccessful:Function = null;
          var handleLoadError:Function = null;
-         var zonePoint:Point = param1;
-         var force:Boolean = param2;
+         var zonePoint:Point = point;
+         var force:Boolean = hasForce;
          var zoneID:int = zonePoint.x * 10000 + zonePoint.y;
          var getAreaURL:String = GLOBAL._mapURL + "getarea";
          var t:int = getTimer();
@@ -611,19 +611,19 @@ package com.monsters.maproom_advanced
          {
             handleLoadSuccessful = function(serverData:Object):void
             {
-               var _loc3_:Object = null;
-               var _loc4_:int = 0;
-               var _loc5_:int = 0;
-               var _loc6_:Array = null;
-               var _loc7_:Object = null;
+               var getCellData:Object = null;
+               var serverZoneId:int = 0;
+               var resourceIndex:int = 0;
+               var allianceData:Array = null;
+               var cell:Object = null;
                var _loc2_:Object = _pendingMapCellDataRequests.shift();
                if(_loc2_ == null)
                {
                }
                if(_pendingMapCellDataRequests.length > 0)
                {
-                  _loc3_ = _pendingMapCellDataRequests[0];
-                  new URLLoaderApi().load(_loc3_.url,_loc3_.loadvars,handleLoadSuccessful,handleLoadError);
+                  getCellData = _pendingMapCellDataRequests[0];
+                  new URLLoaderApi().load(getCellData.url,getCellData.loadvars,handleLoadSuccessful,handleLoadError);
                } 
                if(!_open && !BASE._needCurrentCell)
                {
@@ -631,28 +631,28 @@ package com.monsters.maproom_advanced
                }
                if(serverData && !serverData.error && Boolean(serverData.data))
                {
-                  _loc4_ = serverData.x * 10000 + serverData.y;
-                  if(!_zones[_loc4_])
+                  serverZoneId = serverData.x * 10000 + serverData.y;
+                  if(!_zones[serverZoneId])
                   {
-                     _zones[_loc4_] = new objZone();
+                     _zones[serverZoneId] = new objZone();
                   }
-                  _zones[_loc4_].data = serverData.data;
+                  _zones[serverZoneId].data = serverData.data;
                   if(serverData.resources)
                   {
-                     _loc5_ = 1;
-                     while(_loc5_ < 5)
+                     resourceIndex = 1;
+                     while(resourceIndex < 5)
                      {
-                        GLOBAL._resources["r" + _loc5_].Set(serverData.resources["r" + _loc5_]);
-                        GLOBAL._hpResources["r" + _loc5_] = GLOBAL._resources["r" + _loc5_].Get();
-                        GLOBAL._resources["r" + _loc5_ + "max"] = serverData.resources["r" + _loc5_ + "max"];
-                        GLOBAL._hpResources["r" + _loc5_ + "max"] = serverData.resources["r" + _loc5_ + "max"];
-                        _loc5_++;
+                        GLOBAL._resources["r" + resourceIndex].Set(serverData.resources["r" + resourceIndex]);
+                        GLOBAL._hpResources["r" + resourceIndex] = GLOBAL._resources["r" + resourceIndex].Get();
+                        GLOBAL._resources["r" + resourceIndex + "max"] = serverData.resources["r" + resourceIndex + "max"];
+                        GLOBAL._hpResources["r" + resourceIndex + "max"] = serverData.resources["r" + resourceIndex + "max"];
+                        resourceIndex++;
                      }
                   }
                   if(serverData.alliancedata)
                   {
-                     _loc6_ = serverData.alliancedata;
-                     ALLIANCES.ProcessAlliances(_loc6_);
+                     allianceData = serverData.alliancedata;
+                     ALLIANCES.ProcessAlliances(allianceData);
                   }
                   if(MapRoom._open)
                   {
@@ -660,11 +660,11 @@ package com.monsters.maproom_advanced
                   }
                   else if(BASE._needCurrentCell)
                   {
-                     if(_zones && _zones[_loc4_] && Boolean(_zones[_loc4_].data) && Boolean(_zones[_loc4_].data[BASE._currentCellLoc.x]))
+                     if(_zones && _zones[serverZoneId] && Boolean(_zones[serverZoneId].data) && Boolean(_zones[serverZoneId].data[BASE._currentCellLoc.x]))
                      {
-                        _loc7_ = _zones[_loc4_].data[BASE._currentCellLoc.x][BASE._currentCellLoc.y];
+                        cell = _zones[serverZoneId].data[BASE._currentCellLoc.x][BASE._currentCellLoc.y];
                         GLOBAL._currentCell = new MapRoomCell();
-                        (GLOBAL._currentCell as MapRoomCell).Setup(_loc7_);
+                        (GLOBAL._currentCell as MapRoomCell).Setup(cell);
                         (GLOBAL._currentCell as MapRoomCell).cellX = BASE._currentCellLoc.x;
                         (GLOBAL._currentCell as MapRoomCell).cellY = BASE._currentCellLoc.y;
                         _zones = {};
