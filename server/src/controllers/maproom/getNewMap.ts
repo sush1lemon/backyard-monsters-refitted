@@ -15,7 +15,7 @@ export const getNewMap: KoaController = async (ctx) => {
     }
   
     const response = {
-      newmap: true, // forces the player onto map room 3 and skips the migration process.
+      newmap: false, // forces the player onto map room 3 and skips the migration process.
       mapheaderurl: "http://localhost:3001/api/bm/getnewmap", // Reminder: put in ENV
       width: 500,
       height: 500,

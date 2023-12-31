@@ -142,6 +142,7 @@ package com.monsters.maproom_advanced
       
       public static function _Setup(param1:Point, param2:int = 0, param3:int = 0, param4:Boolean = false, param5:Thread = null) : void
       {
+         GLOBAL.Message("Value of param1 is: " + param1);
          _homePoint = param1;
          _worldID = param2;
          _inviteBaseID = param3;

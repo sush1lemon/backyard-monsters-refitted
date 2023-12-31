@@ -19,7 +19,7 @@ package com.monsters.maproom_advanced
    import flash.geom.Point;
    import flash.net.URLRequest;
    
-   public class PopupInfoEnemy extends PopupInfoEnemy_CLIP
+   internal class PopupInfoEnemy extends PopupInfoEnemy_CLIP
    {
       
       private static var _takeoverCost:SecNum;

@@ -4,7 +4,7 @@ export const flags = {
   kongregate: 1,
 
   // settings
-  maproom2: 0, // Enable | Disable Map Room
+  maproom2: 1, // Enable | Disable Map Room
   inferno: 0, // Enable | Disable Inferno
   showProgressBar: 0,
   gamestats: 0,
@@ -23,7 +23,7 @@ export const flags = {
   fb_api_curl_timeout: 2,
   pageinterval: 25,
   empire_value_limit: 831186222,
-  nwm_relocate: 1,
+  nwm_relocate: 0,
   attacking: 1,
   gifts: 1,
   maproom: 1,

@@ -673,6 +673,7 @@ package com.monsters.maproom_advanced
       
       private function GenerateCells(param1:Point) : void
       {
+         LOGGER.Log("log", "val of param1: " + param1);
          var _loc4_:int = 0;
          var _loc6_:int = 0;
          var _loc7_:MapRoomCell = null;

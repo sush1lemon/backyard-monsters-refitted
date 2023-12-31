@@ -189,7 +189,7 @@ export const getDefaultBaseData = (user?: User) => {
     savetemplate: [],
     updates: [],
     effects: [],
-    homebase: [],
+    homebase: [0, 0], // MapRoom2 co-ordinates, configure dynamically.
     outposts: [],
     worldsize: [500, 500],
     wmstatus: [],
