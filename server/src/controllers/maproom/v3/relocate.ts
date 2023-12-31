@@ -1,4 +1,4 @@
-import { KoaController } from "../../utils/KoaController";
+import { KoaController } from "../../../utils/KoaController";
 
 export const relocate: KoaController = async (ctx) => {
   ctx.status = 200;

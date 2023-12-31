@@ -1,4 +1,4 @@
-import { KoaController } from "../../utils/KoaController";
+import { KoaController } from "../../../utils/KoaController";
 
 export const getNewMap: KoaController = async (ctx) => {
     const cells = []; // Represents each cell
