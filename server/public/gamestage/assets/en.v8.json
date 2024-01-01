@@ -81,16 +81,24 @@
         "h1": "{v1}% Tower Range",
         "h2": "{v1}% Resource Production",
         "dp": "This yard is currently under damage protection.",
+        "att1": "Attack the {v1} tribe.",
+        "att2": "Attack the {v1} tribe.",
+        "att3": "Attack the {v1} tribe.",
+        "catapultrange": "Catapult options in range",
+        "monstersrange": "Monsters in range",
         "truce": {
             "message": "You have a truce in effect with this player and may not attack them.",
             "btn": "Request Truce"
         },
         "bookmark": {
             "btn": "Bookmark"
+        },
+        "bm": {
+            "add": "Add Bookmark"
         }
     },
     "map": {
-        
+        "yardowner": "{v1}'s Yard",
         "coordinateoffmap": "The coordinates specified are off the map grid.",
         "msg": {
             "notbuilt": "You have not built the Map Room. Please check the Buildings menu.",
@@ -389,6 +397,7 @@
         "move": "Move",
         "more": "More...",
         "random": "Random",
+        "save": "Save",
         "home": "Home",
         "jump": "Jump",
         "bookmarks": "Bookmarks",
