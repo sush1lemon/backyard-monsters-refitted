@@ -612,7 +612,7 @@ package com.monsters.maproom_advanced
             handleLoadSuccessful = function(serverData:Object):void
             {
                var getCellData:Object = null;
-               var serverZoneId:int = 0;
+               var zoneId:int = 0;
                var resourceIndex:int = 0;
                var allianceData:Array = null;
                var cell:Object = null;
@@ -631,12 +631,12 @@ package com.monsters.maproom_advanced
                }
                if(serverData && !serverData.error && Boolean(serverData.data))
                {
-                  serverZoneId = serverData.x * 10000 + serverData.y;
-                  if(!_zones[serverZoneId])
+                  zoneId = serverData.x * 10000 + serverData.y;
+                  if(!_zones[zoneId])
                   {
-                     _zones[serverZoneId] = new objZone();
+                     _zones[zoneId] = new objZone();
                   }
-                  _zones[serverZoneId].data = serverData.data;
+                  _zones[zoneId].data = serverData.data;
                   if(serverData.resources)
                   {
                      resourceIndex = 1;
@@ -660,9 +660,9 @@ package com.monsters.maproom_advanced
                   }
                   else if(BASE._needCurrentCell)
                   {
-                     if(_zones && _zones[serverZoneId] && Boolean(_zones[serverZoneId].data) && Boolean(_zones[serverZoneId].data[BASE._currentCellLoc.x]))
+                     if(_zones && _zones[zoneId] && Boolean(_zones[zoneId].data) && Boolean(_zones[zoneId].data[BASE._currentCellLoc.x]))
                      {
-                        cell = _zones[serverZoneId].data[BASE._currentCellLoc.x][BASE._currentCellLoc.y];
+                        cell = _zones[zoneId].data[BASE._currentCellLoc.x][BASE._currentCellLoc.y];
                         GLOBAL._currentCell = new MapRoomCell();
                         (GLOBAL._currentCell as MapRoomCell).Setup(cell);
                         (GLOBAL._currentCell as MapRoomCell).cellX = BASE._currentCellLoc.x;
@@ -708,15 +708,15 @@ package com.monsters.maproom_advanced
          }
       }
       
-      internal static function GetCell(param1:int, param2:int, param3:Boolean = false) : Object
+      internal static function GetCell(cellX:int, cellY:int, param3:Boolean = false) : Object
       {
          var point:Point;
-         var zoneId:int = (point = new Point(int(param1 / _zoneWidth) * _zoneWidth,int(param2 / _zoneHeight) * _zoneHeight)).x * 10000 + point.y;
+         var zoneId:int = (point = new Point(int(cellX / _zoneWidth) * _zoneWidth,int(cellY / _zoneHeight) * _zoneHeight)).x * 10000 + point.y;
          RequestData(point,param3);
-         // GLOBAL.Message("zoneId is: " + zoneId + " has data: " + Boolean(_zones[zoneId].data));
-         if(_zones && _zones[zoneId] && Boolean(_zones[zoneId].data) && Boolean(_zones[zoneId].data[param1]))
+         //GLOBAL.Message("zoneId is: " + zoneId + " has data param1: " + Boolean(_zones[zoneId].data[cellX]));
+         if(_zones && _zones[zoneId] && Boolean(_zones[zoneId].data) && Boolean(_zones[zoneId].data[cellX]))
          {
-            return _zones[zoneId].data[param1][param2];
+            return _zones[zoneId].data[cellX][cellY];
          }
          return null;
       }
