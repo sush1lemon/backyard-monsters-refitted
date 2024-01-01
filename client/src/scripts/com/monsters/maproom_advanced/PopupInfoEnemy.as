@@ -654,7 +654,7 @@ package com.monsters.maproom_advanced
          }
          else if(Boolean(this._cell._truce) && this._cell._truce > GLOBAL.Timestamp())
          {
-            GLOBAL.Message(KEYS.Get("newmap_truce"));
+            GLOBAL.Message(KEYS.Get("newmap_truce_message"));
          }
          else if(Boolean(this._cell._alliance) && this._cell._allianceID == ALLIANCES._allianceID)
          {

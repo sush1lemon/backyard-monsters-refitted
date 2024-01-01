@@ -75,13 +75,35 @@
         "recycledesc": "&nbsp;You are about to recyle your Town Hall."
     },
     "newmap": {
-        "opening": "Opening Map..."
+        "wm": "Wild Monster",
+        "re": "Reserved",
+        "opening": "Opening Map...",
+        "h1": "{v1}% Tower Range",
+        "h2": "{v1}% Resource Production",
+        "dp": "This yard is currently under damage protection.",
+        "truce": {
+            "message": "You have a truce in effect with this player and may not attack them.",
+            "btn": "Request Truce"
+        },
+        "bookmark": {
+            "btn": "Bookmark"
+        }
     },
     "map": {
+        
         "coordinateoffmap": "The coordinates specified are off the map grid.",
         "msg": {
             "notbuilt": "You have not built the Map Room. Please check the Buildings menu.",
             "disabled": "The Map Room is currently <b>disabled</b> in Backyard Monsters Refitted.<br><br>We are aiming to get this working for our <b>beta</b> release.<br><br>For more information join our discord."
+        },
+        "message": {
+            "btn": "Message"
+        },
+        "view": {
+            "btn": "View"
+        },
+        "attack": {
+            "btn": "Attack"
         },
         "norecycle": "You cannot recycle your Map Room in the New World Map. If you want to relocate your yard, click on your Town Hall and choose Relocate."
     },
@@ -266,11 +288,23 @@
     "popup": {
         "championselecttitle": "SELECT YOUR CHAMPION",
         "label": {
-            "reward": "Reward:"
+            "name": "Name:",
+            "reward": "Reward:",
+            "thisyardhas": "This yard has:",
+            "height": "Height:",
+            "location": "Location:"
         }
     },
     "label": {
-        "jumptolocation": "Jump to location:"
+        "userid": "User ID: {v1}",
+        "jumptolocation": "Jump to location:",
+        "owner": "Owner:",
+        "type": "Alliance:",
+        "status": "Status:",
+        "location": "Location:"
+    },
+    "status": {
+        "water": "Water"
     },
     "ui": {
         "topbuildings": "Buildings",
@@ -321,7 +355,8 @@
         }
     },
     "uitop": {
-        "backyardmonsters": "BACKYARD MONSTERS"
+        "backyardmonsters": "BACKYARD MONSTERS",
+        "yardownerlong": "{v1}"
     },
     "worker": {
         "speedup": "Speed-up a worker's task for {v1} Shiny."
@@ -350,6 +385,7 @@
         "upgrade": "Upgrade",
         "upgradeall": "Upgrade All",
         "repairall": "Repair All",
+        "openmap": "Open Map",
         "move": "Move",
         "more": "More...",
         "random": "Random",

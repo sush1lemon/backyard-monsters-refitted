@@ -866,7 +866,7 @@ package com.monsters.maproom_advanced
          }
          if((!this._fallbackHomeCell._updated || param1) && this._fallbackHomeCell._dataAge <= 0)
          {
-            if(_loc5_ = MapRoom.GetCell(this._fallbackHomeCell.X,this._fallbackHomeCell.Y)) // .GetCell returns null
+            if(_loc5_ = MapRoom.GetCell(this._fallbackHomeCell.X,this._fallbackHomeCell.Y))
             {
                this._fallbackHomeCell.Setup(_loc5_);
             }
