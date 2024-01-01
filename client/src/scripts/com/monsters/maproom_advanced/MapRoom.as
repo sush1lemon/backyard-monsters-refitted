@@ -713,7 +713,6 @@ package com.monsters.maproom_advanced
          var point:Point;
          var zoneId:int = (point = new Point(int(cellX / _zoneWidth) * _zoneWidth,int(cellY / _zoneHeight) * _zoneHeight)).x * 10000 + point.y;
          RequestData(point,param3);
-         //GLOBAL.Message("zoneId is: " + zoneId + " has data param1: " + Boolean(_zones[zoneId].data[cellX]));
          if(_zones && _zones[zoneId] && Boolean(_zones[zoneId].data) && Boolean(_zones[zoneId].data[cellX]))
          {
             return _zones[zoneId].data[cellX][cellY];
