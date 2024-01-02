@@ -77,6 +77,8 @@
     "newmap": {
         "wm": "Wild Monster",
         "re": "Reserved",
+        "ey": "Enemy Yard",
+        "my": "My Yard",
         "opening": "Opening Map...",
         "h1": "{v1}% Tower Range",
         "h2": "{v1}% Resource Production",
@@ -89,6 +91,8 @@
         "view": "View {v1}'s Yard",
         "att4": "Attack this yard with all the catapults and monsters in range of the target.",
         "reqtruce": "Request a truce with this player.",
+        "wmmsg": "You cannot send messages to Wild Monster Tribes.",
+        "wmtruce": "Wild Monster Tribes will never accept a truce!",
         "msg": "Send a message to this player.",
         "monstersrange": "Monsters in range",
         "truce": {
@@ -101,6 +105,13 @@
         },
         "bm": {
             "add": "Add Bookmark"
+        },
+        "inf": {
+            "open": "Open your yard to bank, build and upgrade.",
+            "tr": "Transfer Monsters from here across owned bases."
+        },
+        "tr": {
+            "from": "Transfer Monsters From Here"
         }
     },
     "bomb": {
@@ -132,6 +143,11 @@
             "name": "Large"
         }
     },
+    "bubble": {
+        "selecttarget": {
+            "desc": "Select a transfer target"
+        }
+    },
     "map": {
         "trucerequest": "I am requesting a truce",
         "trucemessage": "Lets squash this beef. I am requesting a truce.",
@@ -152,6 +168,7 @@
         },
         "norecycle": "You cannot recycle your Map Room in the New World Map. If you want to relocate your yard, click on your Town Hall and choose Relocate."
     },
+    
     "inferno": {
         "msg": {
             "disabled": "Inferno is currently <b>disabled</b> in Backyard Monsters Refitted. For more information visit our discord."
@@ -332,12 +349,18 @@
     },
     "popup": {
         "championselecttitle": "SELECT YOUR CHAMPION",
+        "desc": {
+            "monstertransfera": "Transfer Monsters"
+        },
         "label": {
             "name": "Name:",
             "reward": "Reward:",
             "thisyardhas": "This yard has:",
             "height": "Height:",
-            "location": "Location:"
+            "location": "Location:",
+            "locationheight": "Location: Height:",
+            "namelocheight": "Location:",
+            "monstershoused": "Monsters Housed"
         }
     },
     "label": {
@@ -423,6 +446,7 @@
         "brag": "Brag to your friends",
         "pick": "Pick",
         "yes": "Yes",
+        "open": "Open",
         "continue": "Continue",
         "nothanks": "No Thanks",
         "fullscreen": "Full Screen",
@@ -431,6 +455,7 @@
         "upgradeall": "Upgrade All",
         "repairall": "Repair All",
         "openmap": "Open Map",
+        "transfer": "Transfer",
         "move": "Move",
         "more": "More...",
         "random": "Random",

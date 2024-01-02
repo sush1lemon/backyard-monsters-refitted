@@ -46,9 +46,13 @@ export const cellData = (ctx: Context) => {
     r: {},
     // Monsters
     m: {
-      hcc: {},
-      h: {},
+      hcc: [],
+      h: [],
       housed: {},
+      overdrivepower: 1,
+      overdrivetime: 0,
+      saved: 0,
+      space: 0
     },
     // Level
     l: 34,
