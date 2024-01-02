@@ -883,7 +883,7 @@ package com.monsters.maproom_advanced
          }
          else if(param1.currentTarget.name == "bBookmark")
          {
-            _loc2_ = KEYS.Get("newmap_bookmark");
+            _loc2_ = KEYS.Get("newmap_bookmark_title");
             _loc3_ = bBookmark.x - 5;
             _loc4_ = bBookmark.y + bAttack.height / 2 - 0;
          }

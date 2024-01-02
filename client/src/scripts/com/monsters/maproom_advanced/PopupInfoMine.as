@@ -355,7 +355,7 @@ package com.monsters.maproom_advanced
          }
          else if(param1 == "bookmark")
          {
-            txtButtonInfo.htmlText = KEYS.Get("newmap_bookmark");
+            txtButtonInfo.htmlText = KEYS.Get("newmap_bookmark_title");
             mcArrow.x = bBookmark.x + bBookmark.width / 2 - 5;
          }
          else if(param1 == "relocateme")

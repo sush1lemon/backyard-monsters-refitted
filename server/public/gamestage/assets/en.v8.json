@@ -85,12 +85,18 @@
         "att2": "Attack the {v1} tribe.",
         "att3": "Attack the {v1} tribe.",
         "catapultrange": "Catapult options in range",
+        "range": "You are not in range of this yard.",
+        "view": "View {v1}'s Yard",
+        "att4": "Attack this yard with all the catapults and monsters in range of the target.",
+        "reqtruce": "Request a truce with this player.",
+        "msg": "Send a message to this player.",
         "monstersrange": "Monsters in range",
         "truce": {
             "message": "You have a truce in effect with this player and may not attack them.",
             "btn": "Request Truce"
         },
         "bookmark": {
+            "title": "Bookmark this yard",
             "btn": "Bookmark"
         },
         "bm": {
@@ -127,6 +133,8 @@
         }
     },
     "map": {
+        "trucerequest": "I am requesting a truce",
+        "trucemessage": "Lets squash this beef. I am requesting a truce.",
         "yardowner": "{v1}'s Yard",
         "coordinateoffmap": "The coordinates specified are off the map grid.",
         "msg": {
@@ -426,6 +434,7 @@
         "move": "Move",
         "more": "More...",
         "random": "Random",
+        "send": "Send",
         "save": "Save",
         "home": "Home",
         "jump": "Jump",
@@ -1925,7 +1934,13 @@
         }
     },
     "mail": {
-        "disabled": "Mailbox is disabled."
+        "disabled": "Mailbox is disabled.",
+        "new": {
+            "to": "To:",
+            "subject": "Subject:",
+            "message": "Message:"
+        },
+        "messagefailed": "Failed to send."
     },
     "emerge": {
         "earthquake": "EARTHQUAKE!",
