@@ -1,12 +1,26 @@
 import { KoaController } from "../../../utils/KoaController";
 
+interface CellRequest {
+  x?: number;
+  y?: number;
+  width?: number;
+  height?: number;
+}
+
 export const getArea: KoaController = async (ctx) => {
-  const uid = ctx.session.userid || 0;
+  const requestBody: CellRequest = ctx.request.body;
+
+  for (const key in requestBody) {
+    requestBody[key] = parseInt(requestBody[key], 10) || 0;
+  }
+
+  const x = requestBody.x;
+  const y = requestBody.y;
 
   const maxX = 500;
   const maxY = 500;
 
-  const data = {};
+  let data = {};
 
   // Map Generation: The map seems to process and generate a 10 x 10 grid in chunks
 
@@ -15,7 +29,7 @@ export const getArea: KoaController = async (ctx) => {
 
     for (let y = 0; y < maxY; y++) {
       data[x][y] = {
-        // User ID types 
+        // User ID types
         // ctx.session.userid - real player | 0 - Wild Monsters | 0 - Other
         uid: 0,
         // Base types:
@@ -31,7 +45,7 @@ export const getArea: KoaController = async (ctx) => {
         aid: 0,
         // Cell terrains based on heights:
         // Water (< 100): water1: < 80 | water2: < 90 | else: water3
-        // Sand: sand1: < 105 | sand2: < 110 
+        // Sand: sand1: < 105 | sand2: < 110
         // Land: land1: < 120 | land2: < 140 | land3: < 160 | land4: < 170
         // Rock: land5: < 175 | else: land6
         i: 109,
@@ -72,7 +86,7 @@ export const getArea: KoaController = async (ctx) => {
         dm: 0,
         // Picture
         pic_square: "",
-         // Image
+        // Image
         im: "",
       };
     }
@@ -81,8 +95,8 @@ export const getArea: KoaController = async (ctx) => {
   ctx.status = 200;
   ctx.body = {
     error: 0,
-    x: 490,
-    y: 0,
+    x,
+    y,
     data: data,
     // resources
     // alliancedata

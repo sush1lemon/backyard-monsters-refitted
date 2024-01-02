@@ -97,6 +97,35 @@
             "add": "Add Bookmark"
         }
     },
+    "bomb": {
+        "tw0": {
+            "name": "Small"
+        },
+        "tw1": {
+            "name": "Medium"
+        },
+        "tw2": {
+            "name": "Large"
+        },
+        "pb0": {
+            "name": "Small"
+        },
+        "pb1": {
+            "name": "Medium"
+        },
+        "pb2": {
+            "name": "Large"
+        },
+        "pu0": {
+            "name": "Small"
+        },
+        "pu1": {
+            "name": "Medium"
+        },
+        "pu2": {
+            "name": "Large"
+        }
+    },
     "map": {
         "yardowner": "{v1}'s Yard",
         "coordinateoffmap": "The coordinates specified are off the map grid.",
