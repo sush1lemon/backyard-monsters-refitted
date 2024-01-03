@@ -1,5 +1,5 @@
 import { KoaController } from "../../../utils/KoaController";
-import { cellData } from "./cells/cellData";
+import { wildMonsterCell } from "./cells/wildMonsterCell";
 import { homeCell } from "./cells/homeCell";
 
 interface CellRequest {
@@ -19,9 +19,9 @@ export const getArea: KoaController = async (ctx) => {
   const x = requestBody.x;
   const y = requestBody.y;
 
-  // Creates 10 x 10 grid from 0 x 0 start
-  const maxX = 10;
-  const maxY = 10;
+  // Creates {maxX} x {maxY} grid from point 0 x 0
+  const maxX = 100;
+  const maxY = 100;
 
   let cells = {};
 
@@ -29,8 +29,9 @@ export const getArea: KoaController = async (ctx) => {
     cells[x] = {};
 
     for (let y = 0; y < maxY; y++) {
-      cells[x][y] = { ...cellData(ctx) };
+      cells[x][y] = { ...wildMonsterCell() };
 
+      // Testing - Hardcoded
       if (x === 0 && y === 0) {
         cells[x][y] = { ...homeCell(ctx) };
       }

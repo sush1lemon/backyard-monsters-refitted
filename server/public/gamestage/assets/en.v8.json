@@ -22,10 +22,21 @@
     "flag": {
         "desc": "A decoration visible to your friends and foes, a great way to represent your country in battle and alligence!"
     },
+    "attack": {
+        "ui": {
+            "flingerlock": "Flinger target lock:"
+        }
+    },
+    "txt": {
+        "flinger": {
+            "capacity": "Flinger Capacity:"
+        }
+    },
     "msg": {
         "building": "Building",
         "loading": "Loading... ",
         "rendering": "Rendering... ",
+        "processing": "Processing",
         "crunching": "Crunching ",
         "nojuicer": "Monster Juicer not built",
         "juicegoo": "Juice {v1} monsters for {v2} Goo?",
@@ -38,6 +49,7 @@
         "wallsgold": "All walls have been upgraded to gold.",
         "wallsblackdiamond": "All walls have been upgraded to black diamond.",
         "moreresourcesheal": "You need <b>{v1}</b> more Goo to heal <b>{v2}</b> monsters.",
+        "healchampion": "Heal Champion for {v1} Shiny?",
         "quest": {
             "housing": "You need to build a Monster Housing to claim this reward."
         },
@@ -168,7 +180,6 @@
         },
         "norecycle": "You cannot recycle your Map Room in the New World Map. If you want to relocate your yard, click on your Town Hall and choose Relocate."
     },
-    
     "inferno": {
         "msg": {
             "disabled": "Inferno is currently <b>disabled</b> in Backyard Monsters Refitted. For more information visit our discord."
@@ -452,6 +463,9 @@
         "fullscreen": "Full Screen",
         "relocateYard": "Relocate Yard",
         "upgrade": "Upgrade",
+        "hold": "Hold",
+        "retreat": "Retreat",
+        "endattack": "End Attack",
         "upgradeall": "Upgrade All",
         "repairall": "Repair All",
         "openmap": "Open Map",
@@ -459,6 +473,7 @@
         "move": "Move",
         "more": "More...",
         "random": "Random",
+        "takeover": "Takeover",
         "send": "Send",
         "save": "Save",
         "home": "Home",
@@ -866,6 +881,15 @@
         "unlockinlocker": "Unlock {v1} in the Monster Locker."
     },
     "mh": {
+        "item": {
+            "unlocking": "Unlocking",
+            "locked": "Locked",
+            "cost": "{v1} housed",
+            "0housed": "0 housed"
+        },
+        "footer": {
+            "desc": "Want to remove some monsters to make room for others? Send them into battle using the <b>Flinger</b> and <b>Map Room</b> or build the <b>Monster Juicer</b> found in the Buildings section of the build menu to turn unused monsters back into Goo."
+        },
         "title": "MONSTER HOUSING",
         "housing": {
             "section": {
