@@ -30,9 +30,9 @@ export const homeCell = (ctx: Context) => {
     // Owns cell
     mine: 1,
     // Flinger Level
-    f: 1,
+    f: 4,
     // Catapult Level
-    c: 2,
+    c: 4,
     // Truce
     t: 0,
     // Base names:
@@ -52,7 +52,7 @@ export const homeCell = (ctx: Context) => {
     m: {
       hcc: {},
       h: [],
-      housed: { C1: 7, C8: 8 },
+      housed: { C12: 1000, C14: 100 },
       overdrivepower: 1,
       overdrivetime: 0,
       saved: 0,

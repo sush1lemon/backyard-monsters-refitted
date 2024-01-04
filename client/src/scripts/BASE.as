@@ -2467,7 +2467,7 @@ package
                popupMCDamaged = new popup_damaged();
                popupMCDamaged.mcFrame.Setup(false);
                popupMCDamaged.title.htmlText = "<b>" + KEYS.Get("pop_damaged_title") + "</b>";
-               popupMCDamaged.tA.htmlText = KEYS.Get("pop_damaged",{"v1":damageCount});
+               popupMCDamaged.tA.htmlText = KEYS.Get("pop_damaged_desc",{"v1":damageCount});
                popupMCDamaged.bAction.SetupKey("pop_damaged_repairall_btn");
                popupMCDamaged.bAction.addEventListener(MouseEvent.CLICK,RepairAll);
                popupMCDamaged.bAction2.SetupKey("pop_damaged_repairnow_btn");

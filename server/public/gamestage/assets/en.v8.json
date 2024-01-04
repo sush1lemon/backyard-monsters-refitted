@@ -24,7 +24,12 @@
     },
     "attack": {
         "ui": {
-            "flingerlock": "Flinger target lock:"
+            "flingerlock": "Flinger target lock:",
+            "attackends": "Attack ended",
+            "attacklock": "Attack lock"
+        },
+        "msg": {
+            "attackover": "The attack is now over."
         }
     },
     "txt": {
@@ -50,6 +55,11 @@
         "wallsblackdiamond": "All walls have been upgraded to black diamond.",
         "moreresourcesheal": "You need <b>{v1}</b> more Goo to heal <b>{v2}</b> monsters.",
         "healchampion": "Heal Champion for {v1} Shiny?",
+        "fillhousing": "Fill your monster housing with {v1} for {v2} Shiny?",
+        "moveyard": {
+            "warn": "Accepting an invite to move yard will delete all outposts.",
+            "warn2": "Consider moving your yard to avoid attacks."
+        },
         "quest": {
             "housing": "You need to build a Monster Housing to claim this reward."
         },
@@ -98,6 +108,8 @@
         "att1": "Attack the {v1} tribe.",
         "att2": "Attack the {v1} tribe.",
         "att3": "Attack the {v1} tribe.",
+        "take4": "You do not have enough resources to take over this yard.",
+        "take5": "Take over this outpost using resources from your empire.",
         "catapultrange": "Catapult options in range",
         "range": "You are not in range of this yard.",
         "view": "View {v1}'s Yard",
@@ -107,6 +119,13 @@
         "wmtruce": "Wild Monster Tribes will never accept a truce!",
         "msg": "Send a message to this player.",
         "monstersrange": "Monsters in range",
+        "destroyed": "Base Destroyed!",
+        "take": {
+            "btn": "Take"
+        },
+        "des": {
+            "wm2": "You have destroyed the Town Hall of this Wild Monster yard! They won't be bothering you for a while."
+        },
         "truce": {
             "message": "You have a truce in effect with this player and may not attack them.",
             "btn": "Request Truce"
@@ -120,13 +139,37 @@
         },
         "inf": {
             "open": "Open your yard to bank, build and upgrade.",
-            "tr": "Transfer Monsters from here across owned bases."
+            "tr": "Transfer Monsters from here across owned bases.",
+            "destroyed": "Destroyed"
         },
         "tr": {
             "from": "Transfer Monsters From Here"
         }
     },
+    "takeover": {
+        "wildmonsteryard": "Take Over Wild Monster Tribe's Yard",
+        "expand": "Expand your empire!",
+        "instant": "Keep your resources and takeover instantly!"
+    },
+    "bonus": {
+        "towerrange": "This yard has a {v1}% range bonus for towers.",
+        "resourceproduction": "This yard has a {v1}% resource bonus for harvesters."
+    },
     "bomb": {
+        "cost": {
+            "resources": "{v1} {v2}"
+        },
+        "catapult": {
+            "level": "Level {v1} Catapult required"
+        },
+        "million": {
+            "short": "m"
+        },
+        "tw": {
+            "name": {
+                "pl": "Twig Missles"
+            }
+        },
         "tw0": {
             "name": "Small"
         },
@@ -135,6 +178,11 @@
         },
         "tw2": {
             "name": "Large"
+        },
+        "pb": {
+            "name": {
+                "pl": "Pebble Bombs"
+            }
         },
         "pb0": {
             "name": "Small"
@@ -145,6 +193,13 @@
         "pb2": {
             "name": "Large"
         },
+        "pb3": {
+            "name": "Huge"
+        },
+        "pu": {
+            "name": "Putty Rage",
+            "description": "Increases monsters damage and speed."
+        },
         "pu0": {
             "name": "Small"
         },
@@ -153,6 +208,9 @@
         },
         "pu2": {
             "name": "Large"
+        },
+        "pu3": {
+            "name": "Huge"
         }
     },
     "bubble": {
@@ -166,6 +224,7 @@
         "yardowner": "{v1}'s Yard",
         "coordinateoffmap": "The coordinates specified are off the map grid.",
         "msg": {
+            "damaged": "The Map Room is damaged.",
             "notbuilt": "You have not built the Map Room. Please check the Buildings menu.",
             "disabled": "The Map Room is currently <b>disabled</b> in Backyard Monsters Refitted.<br><br>We are aiming to get this working for our <b>beta</b> release.<br><br>For more information join our discord."
         },
@@ -213,6 +272,14 @@
             }
         }
     },
+    "empiredestroyed": {
+        "title": "Your empire has been destroyed",
+        "btnstay": "Stay",
+        "btnflee": "Flee"
+    },
+    "empiredestroyed1": "Your yard was recently destroyed by enemy attackers.",
+    "empiredestroyed2": "Your empire was recently destroyed by enemy attackers. You have 0 outposts.",
+    "empiredestroyed3": "Your empire was recently destroyed. You have {v1} outposts still remaining.",
     "pop": {
         "outposts": "Outposts",
         "rupgraded": {
@@ -222,6 +289,16 @@
         "injured": {
             "title": "Call the doctor!",
             "monsters": "<b>You have {1} injured monsters.</b><br>Injured monsters cannot be used in an attack."
+        },
+        "damaged": {
+            "title": "You have been attacked.",
+            "desc": "You have {v1} damaged buildings that need to be repaired.",
+            "repairnow": {
+                "btn": "Repair Now"
+            },
+            "repairall": {
+                "btn": "Repair All"
+            }
         },
         "areyousure": "ARE YOU SURE?",
         "hatbuilt": {
@@ -363,6 +440,12 @@
         "desc": {
             "monstertransfera": "Transfer Monsters"
         },
+        "attackended": {
+            "title": "Attack Ended",
+            "failedWMYard": "You failed to destroy this Wild Monster yard, rebuild your monsters and try again.",
+            "failedWMTH": "You failed to destroy the Town Hall of this Wild Monster yard.",
+            "failedOutpost": "You failed to destroy this Outpost, rebuild your monsters and try again."
+        },
         "label": {
             "name": "Name:",
             "reward": "Reward:",
@@ -463,6 +546,7 @@
         "fullscreen": "Full Screen",
         "relocateYard": "Relocate Yard",
         "upgrade": "Upgrade",
+        "addstorage": "Add To Storage",
         "hold": "Hold",
         "retreat": "Retreat",
         "endattack": "End Attack",
@@ -473,6 +557,7 @@
         "move": "Move",
         "more": "More...",
         "random": "Random",
+        "useresources": "Use Resources",
         "takeover": "Takeover",
         "send": "Send",
         "save": "Save",
@@ -881,6 +966,7 @@
         "unlockinlocker": "Unlock {v1} in the Monster Locker."
     },
     "mh": {
+        "selectedforjuicing": "{v1} out of {v2} selected.",
         "item": {
             "unlocking": "Unlocking",
             "locked": "Locked",
@@ -891,6 +977,12 @@
             "desc": "Want to remove some monsters to make room for others? Send them into battle using the <b>Flinger</b> and <b>Map Room</b> or build the <b>Monster Juicer</b> found in the Buildings section of the build menu to turn unused monsters back into Goo."
         },
         "title": "MONSTER HOUSING",
+        "juicefooter": {
+            "desc": "<b>Want to juice some monsters?</b><br>Select the ones you want to add to the Juicer from the list above."
+        },
+        "selectall": {
+            "btn": "Select All"
+        },
         "housing": {
             "section": {
                 "label": "HOUSING"
