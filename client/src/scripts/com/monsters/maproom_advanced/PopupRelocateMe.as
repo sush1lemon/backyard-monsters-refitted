@@ -46,7 +46,7 @@ package com.monsters.maproom_advanced
             y = 260;
          }
          this._mode = mode;
-         this.tTitle.htmlText = "<b>" + KEYS.Get("map_relocate") + "</b>";
+         this.tTitle.htmlText = "<b>" + KEYS.Get("map_relocate_title") + "</b>";
          if(mode == "invite")
          {
             this.mcInstant.bAction.addEventListener(MouseEvent.CLICK,function(param1:MouseEvent):void

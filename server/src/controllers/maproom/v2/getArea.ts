@@ -1,6 +1,7 @@
 import { KoaController } from "../../../utils/KoaController";
 import { wildMonsterCell } from "./cells/wildMonsterCell";
 import { homeCell } from "./cells/homeCell";
+import { outpostCell } from "./cells/outpostCell";
 
 interface CellRequest {
   x?: number;
@@ -31,9 +32,13 @@ export const getArea: KoaController = async (ctx) => {
     for (let y = 0; y < maxY; y++) {
       cells[x][y] = { ...wildMonsterCell() };
 
-      // Testing - Hardcoded
+      // Testing - Hardcoded co-ordinates to load base types
       if (x === 0 && y === 0) {
         cells[x][y] = { ...homeCell(ctx) };
+      }
+
+      if (x === 2 && y === 1) {
+        cells[x][y] = { ...outpostCell(ctx) };
       }
     }
   }

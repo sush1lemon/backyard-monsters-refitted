@@ -56,6 +56,9 @@
         "moreresourcesheal": "You need <b>{v1}</b> more Goo to heal <b>{v2}</b> monsters.",
         "healchampion": "Heal Champion for {v1} Shiny?",
         "fillhousing": "Fill your monster housing with {v1} for {v2} Shiny?",
+        "movetooutpost": {
+            "warn": "Are you sure you want to relocate to this location? Moving to this outpost will replace it with your Main Yard. This cannot be undone."
+        },
         "moveyard": {
             "warn": "Accepting an invite to move yard will delete all outposts.",
             "warn2": "Consider moving your yard to avoid attacks."
@@ -101,6 +104,7 @@
         "re": "Reserved",
         "ey": "Enemy Yard",
         "my": "My Yard",
+        "outposts": "Outpost",
         "opening": "Opening Map...",
         "h1": "{v1}% Tower Range",
         "h2": "{v1}% Resource Production",
@@ -144,6 +148,12 @@
         },
         "tr": {
             "from": "Transfer Monsters From Here"
+        },
+        "relocate": {
+            "exp": "Move your Main Yard to this location on the World Map."
+        },
+        "invite": {
+            "exp": "Invite a friend to move to this location on the World Map."
         }
     },
     "takeover": {
@@ -218,11 +228,20 @@
             "desc": "Select a transfer target"
         }
     },
+    "wait": {
+        "relocating": "Relocating..."
+    },
     "map": {
         "trucerequest": "I am requesting a truce",
         "trucemessage": "Lets squash this beef. I am requesting a truce.",
         "yardowner": "{v1}'s Yard",
+        "outpostowner": "{v1}'s Outpost",
         "coordinateoffmap": "The coordinates specified are off the map grid.",
+        "relocate": {
+            "title": "Relocating.",
+            "notenoughresources": "You do not have enough resources to relocate"
+        },
+        "relocateinstant": "Keep your resources and relocate instantly!",
         "msg": {
             "damaged": "The Map Room is damaged.",
             "notbuilt": "You have not built the Map Room. Please check the Buildings menu.",
@@ -238,6 +257,10 @@
             "btn": "Attack"
         },
         "norecycle": "You cannot recycle your Map Room in the New World Map. If you want to relocate your yard, click on your Town Hall and choose Relocate."
+    },
+    "invite": {
+        "subject": "Invite to move next to me!",
+        "body": "Let's join forces and take over together! I am inviting you to relocate near my yard."
     },
     "inferno": {
         "msg": {
@@ -558,6 +581,8 @@
         "more": "More...",
         "random": "Random",
         "useresources": "Use Resources",
+        "movemainyardhere": "Move Main Yard Here",
+        "invitetomove": "Invite Friends to Move",
         "takeover": "Takeover",
         "send": "Send",
         "save": "Save",

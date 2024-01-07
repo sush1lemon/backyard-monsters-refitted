@@ -40,8 +40,8 @@ export const homeCell = (ctx: Context) => {
     n: "My Yard",
     // Friends
     fr: 0,
-    // Damage Protection
-    // Values: 0 - unprotected | 1 - protected
+    // Online
+    // Values: 0 - offline | 1 - online
     on: 0,
     // Damage Protection
     // Values: 0 - unprotected | 1 - protected

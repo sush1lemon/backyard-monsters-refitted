@@ -190,11 +190,7 @@ export const getDefaultBaseData = (user?: User) => {
     updates: [],
     effects: [],
     homebase: ["0", "0"],
-    outposts: [ // Dummy outposts
-      [10, 20, 600024],
-      [15, 25, 600025],
-      [30, 40, 600026],
-    ],
+    outposts: [[2, 1, 600024]], // Dummy outposts
     worldsize: [500, 500],
     wmstatus: [],
     chatservers: ["bym-chat.kixeye.com"],
