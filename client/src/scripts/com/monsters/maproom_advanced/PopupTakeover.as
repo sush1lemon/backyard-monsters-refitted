@@ -162,10 +162,10 @@ package com.monsters.maproom_advanced
          var takeoverSuccessful:Function = null;
          var takeoverError:Function = null;
          var useShiny:Boolean = param1;
-         takeoverSuccessful = function(param1:Object):void
+         takeoverSuccessful = function(serverData:Object):void
          {
             PLEASEWAIT.Hide();
-            if(param1.error == 0)
+            if(serverData.error == 0)
             {
                BASE._takeoverFirstOpen = _cell._base == 1 ? 1 : 2;
                BASE._takeoverPreviousOwnersName = _cell._name;
@@ -186,7 +186,7 @@ package com.monsters.maproom_advanced
             }
             else
             {
-               GLOBAL.Message(KEYS.Get("err_takeoverproblem") + param1.error);
+               GLOBAL.Message(KEYS.Get("err_takeoverproblem") + serverData.error);
             }
             Hide();
          };

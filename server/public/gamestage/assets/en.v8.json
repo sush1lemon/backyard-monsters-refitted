@@ -104,6 +104,7 @@
         "re": "Reserved",
         "ey": "Enemy Yard",
         "my": "My Yard",
+        "eo": "Enemy Outpost",
         "outposts": "Outpost",
         "opening": "Opening Map...",
         "h1": "{v1}% Tower Range",
@@ -144,6 +145,7 @@
         "inf": {
             "open": "Open your yard to bank, build and upgrade.",
             "tr": "Transfer Monsters from here across owned bases.",
+            "damaged": "{v1}% Damaged",
             "destroyed": "Destroyed"
         },
         "tr": {
@@ -1899,8 +1901,12 @@
         "shiny#": "Shiny",
         "time#": "Time"
     },
+    "b": {
+        "outpost": "Outpost"
+    },
     "#b": {
         "townhall#": "Town Hall",
+        "outpost#": "Outpost",
         "twigsnapper#": "Twig Snapper",
         "pebbleshiner#": "Pebble Shiner",
         "puttysquisher#": "Putty Squisher",

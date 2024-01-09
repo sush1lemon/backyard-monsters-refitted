@@ -34,7 +34,7 @@ export const getArea: KoaController = async (ctx) => {
 
       // Testing - Hardcoded co-ordinates to load base types
       if (x === 0 && y === 0) {
-        cells[x][y] = { ...homeCell(ctx) };
+        cells[x][y] = await homeCell(ctx);
       }
 
       if (x === 2 && y === 1) {

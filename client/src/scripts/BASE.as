@@ -493,6 +493,7 @@ package
          };
       }
       
+      // Docs: This function seems to be responsible for loading different base types based on param values.
       public static function LoadBase(param1:String = null, param2:Number = 0, param3:Number = 0, param4:String = "build", param5:Boolean = false, param6:int = -1, param7:Number = 0, param8:Array = null) : Boolean
       {
          if(isNaN(param3))
