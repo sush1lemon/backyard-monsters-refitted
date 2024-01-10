@@ -2,7 +2,7 @@ import { Context } from "koa";
 
 // Implement: All data should come from db to populate these properties
 // Currently the majority of this data is hardcoded to emulate a player
-export const outpostCell = (ctx: Context) => {
+export const outpostCell = async (ctx: Context) => {
   const userId = ctx.session.userid || 0;
 
   return {

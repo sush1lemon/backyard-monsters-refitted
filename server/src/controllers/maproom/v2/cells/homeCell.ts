@@ -10,10 +10,10 @@ export const homeCell = async (ctx: Context) => {
 
   /**
    * For additional details about each of the following properties
-   * visit the Wiki page: 'World Map v2: Properties'
+   * visit the Wiki page: 'World Map v2: Cell Object'
    */
   return {
-    uid: user.userid,
+    uid: save.userid, // ToDo: Why do we have a userId for both user and save table? Fix
     b: 2,
     fbid: save.fbid,
     pi: 0,
@@ -26,11 +26,11 @@ export const homeCell = async (ctx: Context) => {
     t: 0,
     n: user.username,
     fr: 0,
-    on: 0,
+    on: 0, // ToDo
     p: save.protected,
     r: save.resources,
     m: save.monsters,
-    l: save.level,
+    l: 1, // ToDo
     d: save.destroyed,
     lo: save.locked,
     dm: save.damage,

@@ -1,11 +1,16 @@
-export const wildMonsterCell = () => {
+const tribes = ["Kozu", "Legionnaire", "Dreadnaut", "Abunakki"];
+
+export const wildMonsterCell = async () => {
+  const randomIndex = Math.floor(Math.random() * tribes.length);
+  const tribeName = tribes[randomIndex];
+
   return {
     uid: 0,
     b: 1,
     bid: 1234,
     aid: 0,
     i: 109,
-    n: "Dreadnaut",
+    n: tribeName,
     r: {},
     m: {
       hcc: [],

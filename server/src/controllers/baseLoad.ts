@@ -11,6 +11,10 @@ import { flags } from "../data/flags";
 import { getCurrentDateTime } from "../utils/getCurrentDateTime";
 
 export const baseLoad: KoaController = async (ctx) => {
+  // MR2 ToDo: The client sends this data to the server: {"baseid":"1234","type":"view","userid":""}
+  // In this example, the baseid '1234' is a hardcoded value in wildMonsterCell.ts for a tribe's base,
+  // The 'baseid' should be used to lookup & return a base in the database with the corresponding id
+
   // Try find an already existing save
   const user: User = ctx.authUser;
   await ORMContext.em.populate(user, ["save"]);

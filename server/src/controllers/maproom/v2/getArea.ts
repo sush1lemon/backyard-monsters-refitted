@@ -3,7 +3,7 @@ import { wildMonsterCell } from "./cells/wildMonsterCell";
 import { homeCell } from "./cells/homeCell";
 import { outpostCell } from "./cells/outpostCell";
 
-interface CellRequest {
+interface Cell {
   x?: number;
   y?: number;
   width?: number;
@@ -11,7 +11,7 @@ interface CellRequest {
 }
 
 export const getArea: KoaController = async (ctx) => {
-  const requestBody: CellRequest = ctx.request.body;
+  const requestBody: Cell = ctx.request.body;
 
   for (const key in requestBody) {
     requestBody[key] = parseInt(requestBody[key], 10) || 0;
@@ -30,7 +30,7 @@ export const getArea: KoaController = async (ctx) => {
     cells[x] = {};
 
     for (let y = 0; y < maxY; y++) {
-      cells[x][y] = { ...wildMonsterCell() };
+      cells[x][y] = await wildMonsterCell();
 
       // Testing - Hardcoded co-ordinates to load base types
       if (x === 0 && y === 0) {
@@ -38,7 +38,7 @@ export const getArea: KoaController = async (ctx) => {
       }
 
       if (x === 2 && y === 1) {
-        cells[x][y] = { ...outpostCell(ctx) };
+        cells[x][y] = await outpostCell(ctx);
       }
     }
   }

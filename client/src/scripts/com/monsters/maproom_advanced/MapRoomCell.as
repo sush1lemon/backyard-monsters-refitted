@@ -328,6 +328,7 @@ package com.monsters.maproom_advanced
          this._base = serverData.b;
          if(serverData.bid)
          {
+            // Comment: Set the home cell for user if bid == homebaseid
             if(this._baseID != 0 && this._baseID == GLOBAL._homeBaseID)
             {
                MapRoom._homeCell = this;
