@@ -81,6 +81,8 @@ package
 
         private var PRIMARY:uint = 0xE9D34F;
 
+        private var isLoading:Boolean = false;
+
         public function AuthForm()
         {
             addEventListener(Event.ADDED_TO_STAGE, formAddedToStageHandler);
@@ -430,6 +432,8 @@ package
         {
             clearErrorMessages();
 
+            if(isLoading) return;
+
             var isUsernameValid:Boolean = isValidUsername(usernameValue);
             var isEmailValid:Boolean = isValidEmail(emailValue);
             var isPasswordValid:Boolean = isValidPassword(passwordValue);
@@ -441,6 +445,7 @@ package
                     if (isUsernameValid)
                     {
                         var newUser:Array = [["username", usernameValue], ["email", emailValue], ["password", passwordValue], ["last_name", ""], ["pic_square", ""]];
+                        isLoading = true;
                         new URLLoaderApi().load(GLOBAL._apiURL + "player/register", newUser, registerNewUser, handleNetworkError);
                     }
                     else
@@ -450,6 +455,7 @@ package
                 }
                 else
                 {
+                    isLoading = true;
                     new URLLoaderApi().load(GLOBAL._apiURL + "bm/getnewmap", null, postAuthDetails, handleNetworkError);
                 }
             }
@@ -472,6 +478,7 @@ package
 
         private function postAuthDetails(serverData:Object):void
         {
+            isLoading = false;
             LOGIN.OnGetNewMap(serverData, [["email", emailValue], ["password", passwordValue]]);
         }
 
@@ -479,12 +486,14 @@ package
         {
             GLOBAL.Message("<b>Congratulations!</b> Your account has been successfully created, you can now login.<br><br>As a new member of Backyard Monsters Refitted, we're excited to have you on board!");
             isRegisterForm = false;
+            isLoading = false;
             updateUI();
         }
 
         public function handleNetworkError(event:Event):void
         {
             GLOBAL.Message("Hmm.. it seems we cannot connect you to the server at this time. Please try again later or check our server status.");
+            isLoading = false;
         }
 
         private function isValidUsername(username:String):Boolean
